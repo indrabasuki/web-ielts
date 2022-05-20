@@ -249,14 +249,6 @@ class Member extends CI_Controller
         $this->ciqrcode->generate($params); // fungsi untuk generate QR CODE
         $data = [
             'user_id'               => $id_user,
-            'listening_status'      => 0,
-            'reading_status'        => 0,
-            'writing_status'        => 0,
-            'speaking_status'       => 0,
-            'listening_band'        => 0,
-            'reading_band'          => 0,
-            'writing_band'          => 0,
-            'speaking_band'         => 0,
             'ielts_band'            => 0,
             'start_date'            => null,
             'finish_date'           => null,

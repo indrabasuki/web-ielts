@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html translate="no">
 
 <head>
     <meta charset="utf-8">
@@ -218,6 +218,9 @@
     <script src="<?= base_url() ?>public/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="<?= base_url() ?>public/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="<?= base_url() ?>public/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- sweetalert2 -->
+    <script src="<?= base_url() ?>public/plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script>
         var base_url = '<?= base_url() ?>';
         $(document).ready(function() {

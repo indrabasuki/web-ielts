@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html translate="no">
 
 <head>
 
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>public/plugins/daterangepicker/daterangepicker.css">
 
 
-    <!-- <style>
+    <style>
         .disable-select {
             user-select: none;
             /* supported by Chrome and Opera */
@@ -37,7 +37,7 @@
             -ms-user-select: none;
             /* Internet Explorer/Edge */
         }
-    </style> -->
+    </style>
     <!-- jQuery -->
     <script src="<?= base_url() ?>public/plugins/jquery/jquery.min.js"></script>
 

@@ -18,6 +18,8 @@ class Dashboard extends CI_Controller
         $user               = $this->session->userdata();
         $data['user']       = $user;
         $data['member']     = $this->db->get_where('user', ['email' => $user['email']])->row();
+        $data['total_test'] = $this->db->get_where('user_exam', ['user_id' => $user['id_user']])->num_rows();
+        $data['completed']  = $this->db->get_where('user_exam', ['user_id' => $user['id_user'], 'status' => 1])->num_rows();
         $this->template->member('member/dashboard', 'Dashboard', $data);
     }
 }

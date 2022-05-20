@@ -60,6 +60,14 @@ class User_exam_model extends CI_Model
         return $this->db->get();
     }
 
+    public function listUserExamResult($user_id)
+    {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->where('user_id', $user_id);
+        return $this->db->row();
+    }
+
     public function listUserCertificate($user_id)
     {
         $this->db->select('*');

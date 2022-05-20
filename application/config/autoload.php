@@ -8,7 +8,6 @@ $autoload['libraries'] = array(
     'session',
     'email',
     'database',
-    'encryption',
     'template',
     'datatables',
     'form_validation',
@@ -21,7 +20,8 @@ $autoload['helper'] = array(
     'url',
     'form',
     'security',
-    'my_helper'
+    'my_helper',
+    'score_helper'
 );
 
 $autoload['config'] = array(

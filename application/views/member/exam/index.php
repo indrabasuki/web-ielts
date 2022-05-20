@@ -30,7 +30,6 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p>ID : <?= $item->id ?></p>
                         <table class="table text-center">
                             <tr>
                                 <td><strong>Duration</strong></td>
@@ -46,7 +45,7 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="" class="btn btn-success btn-block <?= $item->status == 0 || $item->status == 2 ? 'disabled' : '' ?>"><i class="fas fa-list-alt"></i> Result</a>
+                                <a href="<?= base_url('exam/result/') . $item->id ?>" class="btn btn-success btn-block <?= $item->status == 0 || $item->status == 2 ? 'disabled' : '' ?>"><i class="fas fa-list-alt"></i> Result</a>
                             </div>
                             <div class="col-md-6">
                                 <a href="<?= base_url('exam/detail/') . $item->id ?>" class="btn btn-primary btn-block  <?= $item->status == 1 || $item->status == 2 ? 'disabled' : '' ?>">Start Test <i class="fas fa-arrow-circle-right"></i></a>
@@ -74,8 +73,6 @@
 
     <?php endif; ?>
 </div>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="startTestModal" tabindex="-1" role="dialog" aria-labelledby="startTestModalTitle" aria-hidden="true">

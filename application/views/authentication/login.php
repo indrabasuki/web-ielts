@@ -69,7 +69,7 @@
                         <div class="icheck-primary">
                             <input type="checkbox" id="remember">
                             <label for="remember">
-                                Ingat Saya
+                                Remember me
                             </label>
                         </div>
                     </div>

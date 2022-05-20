@@ -49,6 +49,7 @@ class Authentication extends CI_Controller
                             'id_user' => $user['id_user'],
                             'name' => $user['name'],
                             'email' => $user['email'],
+                            'phone' => $user['phone'],
                             'role' => $user['role']
                         ];
                         $this->session->set_userdata($data);
@@ -124,6 +125,7 @@ class Authentication extends CI_Controller
         $this->session->unset_userdata('name');
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role');
+        $this->session->unset_userdata('phone');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Session finish</div>');
         redirect('authentication');
     }

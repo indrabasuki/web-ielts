@@ -87,44 +87,8 @@
                                         <div class="timeline-item">
                                             <h3 class="timeline-header"><a href="#"><?= $i->name ?></a> (<?= $i->email ?>)</h3>
                                             <div class="timeline-body">
-                                                <p>ID Test : <?= $i->id ?></p>
+                                                <p>ID Test : <?= sha1($i->id) ?></p>
                                                 <div class="table-responsive">
-                                                    <table class="table">
-                                                        <tr>
-                                                            <td>Listening Band :<?= $i->listening_band ?>
-                                                                <br>
-                                                                <?php if ($i->listening_status == 0) : ?>
-                                                                    <span class="badge badge-danger">Not Completed</span>
-                                                                <?php else : ?>
-                                                                    <span class="badge badge-success">Completed</span>
-                                                                <?php endif ?>
-                                                            </td>
-                                                            <td>Reading Band :<?= $i->reading_band ?>
-                                                                <br>
-                                                                <?php if ($i->reading_status == 0) : ?>
-                                                                    <span class="badge badge-danger">Not Completed</span>
-                                                                <?php else : ?>
-                                                                    <span class="badge badge-success">Completed</span>
-                                                                <?php endif ?>
-                                                            </td>
-                                                            <td>Writing Reading :<?= $i->writing_band ?>
-                                                                <br>
-                                                                <?php if ($i->writing_status == 0) : ?>
-                                                                    <span class="badge badge-danger">Not Completed</span>
-                                                                <?php else : ?>
-                                                                    <span class="badge badge-success">Completed</span>
-                                                                <?php endif ?>
-                                                            </td>
-                                                            <td>Speaking Reading :<?= $i->speaking_band ?>
-                                                                <br>
-                                                                <?php if ($i->speaking_status == 0) : ?>
-                                                                    <span class="badge badge-danger">Not Completed</span>
-                                                                <?php else : ?>
-                                                                    <span class="badge badge-success">Completed</span>
-                                                                <?php endif ?>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
                                                 </div>
                                                 <h5>Overal Band : <?= $i->ielts_band ?></h5>
                                             </div>
@@ -139,11 +103,8 @@
                                                     <a href="<?= base_url('administrator/member/reset_test/') . "" . $i->id ?>" class="btn btn-success btn-sm">Reset Test <i class="fas fa-sync-alt"></i></a>
                                                     <a href="<?= base_url('administrator/member/delete_test/') . "" . $i->id ?>" class="float-right btn btn-danger btn-sm">Delete <i class="fas fa-trash"></i></a>
                                                 <?php endif; ?>
-
                                             </div>
                                         </div>
-
-
                                     </div>
                                     <hr>
                                 <?php endforeach; ?>

@@ -1,32 +1,15 @@
 <div class="container">
-    <!-- <div class="row">
-        <div class="col-md-2 mt-2">
-            <div class="card">
-                <div class="card-header text-center">
-                    <p>Listening</p>
-                    <p>Section 1</p>
-                </div>
-                <div class="card-body">
-                    <p>Audio</p>
-                    <audio id="audio">
-                        <source src="<?= base_url('public/uploads/audio/audio.mp3') ?>">
-                    </audio>
-                    <button class="rounded float-right btn-block btn btn-sm bg-gradient-success btn-list" id="btn-list" onclick="playAudio()" type="button">Play Audio <i class="fas fa-play"></i></button>
-
-                    <p id="progress"></p>
-                </div>
-
-                <div class=" card-footer">
-                    <button id="submit" class="btn btn-primary btn-sm btn-block">Submit <i class="fas fa-save"></i></button>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" mt-2 bg-info text-white shadow text-center mb-1">
+                <h3 class="mb-0 font-weight-bold text-uppercase">Remaining Time
+                    : <i class="fas fa-clock"></i> <span class="sisawaktu"></span> </h3>
             </div>
         </div>
 
-
-    </div> -->
-
+    </div>
     <div class="row ">
-        <div class="col-md-12 mt-4">
+        <div class="col-md-12 mt-1">
             <div class="card card-primary card-tabs">
                 <div class="card-header p-0 pt-1">
                     <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
@@ -51,7 +34,7 @@
                 </div>
                 <div class="card-body">
                     <?= form_open('listening/store') ?>
-                    <input type="hidden" name="id" value="<?= $listening->id ?>">
+                    <input type="hidden" name="id" value="<?= $id ?>">
                     <div class="tab-content" id="custom-tabs-two-tabContent">
                         <!-- part1 -->
                         <div class="tab-pane fade show active" id="tabs-part-1" role="tabpanel" aria-labelledby="tabs-part1">
@@ -78,21 +61,21 @@
                                         <td class="">
                                             <p style="margin-left: 10%;">Contact phone
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <b>1.</b><input type="text" name="params_1" size="40" placeholder="Your answer" required>
+                                                <b>1.</b><input type="text" name="params_1" size="40" placeholder="Your answer">
                                             </p>
                                             <p style="margin-left: 10%;">Date of birth
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                                                <b>2.</b><input type="text" name="params_2" size="40" placeholder="Your answer" required>,
+                                                <b>2.</b><input type="text" name="params_2" size="40" placeholder="Your answer">,
                                                 1992
                                             </p>
                                             <p style="margin-left: 10%;">Occupation works as a
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <b>3.</b><input size="40" type="text" name="params_3" placeholder="Your answer" required>
+                                                <b>3.</b><input size="40" type="text" name="params_3" placeholder="Your answer">
                                             </p>
                                             <p style="margin-left: 10%;">Insurance company
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <b>4.</b><input size="40" type="text" name="params_4" placeholder="Your answer" required> Life Insurance
+                                                <b>4.</b><input size="40" type="text" name="params_4" placeholder="Your answer"> Life Insurance
                                             </p>
                                             <p>
                                                 <b>Details of the problem</b>
@@ -100,13 +83,13 @@
                                             <p style="margin-left: 10%;">Type of problem
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 pain in her left
-                                                <b>5.</b><input size="40" name="params_5" type="text" placeholder="Your answer" required>
+                                                <b>5.</b><input size="40" name="params_5" type="text" placeholder="Your answer">
 
                                             </p>
                                             <p style="margin-left: 10%;">When it began
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <b>6.</b><input size="40" type="text" name="params_6" placeholder="Your answer" required>ago
+                                                <b>6.</b><input size="40" type="text" name="params_6" placeholder="Your answer">ago
                                             </p>
                                             <p style="margin-left: 10%;">Action already taken
                                                 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -117,17 +100,17 @@
                                             </p>
                                             <p style="margin-left: 10%;">Sports played
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                belongs to a <b>7.</b><input type="text" size="40" placeholder="Your answer" name="params_7" required>
+                                                belongs to a <b>7.</b><input type="text" size="40" placeholder="Your answer" name="params_7">
                                                 club
                                             </p>
                                             <p style="margin-left: 10%;">
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                goes <b>8.</b><input type="text" size="40" placeholder="Your answer" required name="params_8"> regularly
+                                                goes <b>8.</b><input type="text" size="40" placeholder="Your answer" name="params_8"> regularly
                                             </p>
                                             <p style="margin-left: 10%;">Medical history
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                injured her <b>9.</b><input type="text" size="40" placeholder="Your answer" name="params_9" required> last
+                                                injured her <b>9.</b><input type="text" size="40" placeholder="Your answer" name="params_9"> last
                                                 year
                                             </p>
                                             <p style="margin-left: 10%;">
@@ -138,7 +121,7 @@
                                             <p style="margin-left: 10%;">
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                no regular medication apart from <b>10</b><input type="text" size="40" placeholder="Your answer" required name="params_10">
+                                                no regular medication apart from <b>10</b><input type="text" size="40" placeholder="Your answer" name="params_10">
                                             </p>
 
                                         </td>
@@ -357,21 +340,21 @@
                                     <table class="table table-bordered">
                                         <tr>
                                             <td>
-                                                <p>what <b>21.</b> <input type="text" name="params_21" required placeholder="Your answer" size="25"> the items is on
+                                                <p>what <b>21.</b> <input type="text" name="params_21" placeholder="Your answer" size="25"> the items is on
                                                 </p>
-                                                <p>the <b>22.</b> <input type="text" name="params_22" required placeholder="Your answer" size="25"> of the item,
+                                                <p>the <b>22.</b> <input type="text" name="params_22" placeholder="Your answer" size="25"> of the item,
                                                     including the
                                                     headline
                                                 </p>
-                                                <p>any <b>23.</b> <input type="text" name="params_23" required placeholder="Your answer" size="25"> accompanying the
+                                                <p>any <b>23.</b> <input type="text" name="params_23" placeholder="Your answer" size="25"> accompanying the
                                                     item</p>
-                                                <p>the <b>24.</b> <input type="text" name="params_24" required placeholder="Your answer" size="25"> of the item,
+                                                <p>the <b>24.</b> <input type="text" name="params_24" placeholder="Your answer" size="25"> of the item,
                                                     e.g. what’s
                                                     made
                                                     prominent</p>
-                                                <p>the writer’s main <b>25.</b> <input type="text" name="params_25" required placeholder="Your answer" size="25">
+                                                <p>the writer’s main <b>25.</b> <input type="text" name="params_25" placeholder="Your answer" size="25">
                                                 </p>
-                                                <p>the <b>26.</b> <input type="text" name="params_26" required placeholder="Your answer" size="25"> the writer may
+                                                <p>the <b>26.</b> <input type="text" name="params_26" placeholder="Your answer" size="25"> the writer may
                                                     make about
                                                     the
                                                     reader</p>
@@ -394,10 +377,10 @@
                                         </tr>
                                     </table>
                                     <p><strong>Types of articles</strong></p>
-                                    <p><b>27.</b> national news item <input type="text" name="params_27" required placeholder="Your answer" size="25"></p>
-                                    <p><b>28.</b> editorial<input type="text" name="params_28" required placeholder="Your answer" size="25"></p>
-                                    <p><b>29.</b> human interest <input type="text" name="params_29" required placeholder="Your answer" size="25"></p>
-                                    <p><b>30.</b> arts <input type="text" name="params_30" required placeholder="Your answer" size="25"></p>
+                                    <p><b>27.</b> national news item <input type="text" name="params_27" placeholder="Your answer" size="25"></p>
+                                    <p><b>28.</b> editorial<input type="text" name="params_28" placeholder="Your answer" size="25"></p>
+                                    <p><b>29.</b> human interest <input type="text" name="params_29" placeholder="Your answer" size="25"></p>
+                                    <p><b>30.</b> arts <input type="text" name="params_30" placeholder="Your answer" size="25"></p>
                                 </div>
                             </div>
                         </div>
@@ -424,54 +407,56 @@
                                             <td>
                                                 <p class="text-center"><strong>Conflict at work</strong> </p>
                                                 <p>Conflict mostly consists of behaviour in the general category of <b>31.</b>
-                                                    <input type="text" name="params_31" required placeholder="Your answer" size="25">
+                                                    <input type="text" name="params_31" placeholder="Your answer" size="25">
                                                 </p>
                                                 <p>Often a result of people wanting to prove their <b>32.</b>
-                                                    <input type="text" name="params_32" required placeholder="Your answer" size="25">
+                                                    <input type="text" name="params_32" placeholder="Your answer" size="25">
                                                 </p>
                                                 <p>Also caused by differences in <b>33.</b>
-                                                    <input type="text" name="params_33" required placeholder="Your answer" size="25"> between people
+                                                    <input type="text" name="params_33" placeholder="Your answer" size="25"> between people
                                                 </p>
                                                 <p><b>34.</b>
-                                                    <input type="text" name="params_34" required placeholder="Your answer" size="25">conflicts: people more concerned about own team than about
+                                                    <input type="text" name="params_34" placeholder="Your answer" size="25">conflicts: people more concerned about own team than about
                                                     company
                                                 </p>
                                                 <p>Conflict-related stress can cause <b>35.</b>
-                                                    <input type="text" name="params_35" required placeholder="Your answer" size="25"> that may last for months
+                                                    <input type="text" name="params_35" placeholder="Your answer" size="25"> that may last for months
                                                 </p><br>
                                                 <p><strong>Chief Executives (CEOs)</strong></p>
                                                 <p>May have both <b>36.</b>
-                                                    <input type="text" name="params_36" required placeholder="Your answer" size="25"> and anxiety
+                                                    <input type="text" name="params_36" placeholder="Your answer" size="25"> and anxiety
                                                 </p>
                                                 <p>May not like to have their decisions questioned</p>
                                                 <p>There may be conflict between people who have different <b>37.</b>
-                                                    <input type="text" name="params_37" required placeholder="Your answer" size="25">
+                                                    <input type="text" name="params_37" placeholder="Your answer" size="25">
                                                 </p><br>
                                                 <p><strong>Other managers</strong></p>
                                                 <p>A structure that is more <b>38.</b>
-                                                    <input type="text" name="params_38" required placeholder="Your answer" size="25">may create a feeling of uncertainty
+                                                    <input type="text" name="params_38" placeholder="Your answer" size="25">may create a feeling of uncertainty
                                                     about who staff should report to.
                                                 </p><br>
                                                 <p><strong>Minimising conflict</strong></p>
                                                 <p>Bosses need to try hard to gain <b>39.</b>
-                                                    <input type="text" name="params_39" required placeholder="Your answer" size="25">
+                                                    <input type="text" name="params_39" placeholder="Your answer" size="25">
                                                 </p>
                                                 <p>Someone from outside the company may be given the role of <b>40
                                                         .</b>
                                                     <input type="text" name="params_40
-                                                " required placeholder="Your answer" size="25"> in
+                                                " placeholder="Your answer" size="25"> in
                                                     order to resolve conflicts.
                                                 </p>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
+                                <div class="card-footer">
+                                    <button onclick="javascript:return confirm('Are you sure ?')" class="btn btn-primary" id="submit" type="submit">Submit <i class="fas fa-check"></i></button>
+
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="card-footer text-center">
-                    <button class="btn btn-primary " type="submit">Submit <i class="fas fa-check"></i></button>
                 </div>
                 <?= form_close() ?>
             </div>
@@ -482,7 +467,18 @@
     $(document).ready(function() {
         $(":input").keyup(function() {
             $(this).val($(this).val().toUpperCase());
-
         });
+        Date.prototype.addHours = function(h) {
+            this.setHours(this.getHours() + h);
+            return this;
+        }
+        var today = new Date().addHours(1);
+        var date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var datetime = date + " " + time;
+
+        sisawaktu(datetime);
+
+
     });
 </script>

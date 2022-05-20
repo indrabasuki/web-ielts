@@ -5,31 +5,42 @@
 </div>
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="info-box">
             <img src="<?= base_url('public/img/logo.jpeg') ?>" width="100" alt="">
             <div class="info-box-content">
                 <h2>TEST IELTS with Golden English <a href="<?= base_url('exam') ?>" title="Start" class="btn btn-primary float-right">Start Test <i class="fas fa-play"></i></a>
                 </h2>
             </div>
-
-
         </div>
     </div>
+</div>
 
-    <div class="col-md-4">
-        <div class="info-box bg-info">
-            <div class="info-box-content">
-                <span class="info-box-text">IELTS TEST COMPLETED</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                </div>
-                <span class="progress-description text-center">
-                    <h5> 70% Increase in 30 Days</h5>
-                </span>
+<div class="row">
+    <div class="col-md-6 col-12">
+        <!-- small box -->
+        <div class="small-box bg-info" id="test">
+            <div class="inner">
+                <h3 class="text-white"><?= $completed ?> / <?= $total_test ?></h3>
+                <p class="text-white">Test Completed / Total Test </p>
             </div>
-
+            <div class="icon">
+                <i class="fas fa-file text-white"></i>
+            </div>
+            <a href="<?= base_url('exam') ?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-
+    </div>
+    <div class="col-md-6 col-12">
+        <!-- small box -->
+        <div class="small-box bg-info " id="certificate">
+            <div class="inner">
+                <h3 class="text-white"><?= $completed ?>/ <?= $total_test ?></h3>
+                <p class="text-white">Certificate Test</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-barcode text-white"></i>
+            </div>
+            <a href="<?= base_url('certificate') ?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
     </div>
 </div>
